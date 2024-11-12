@@ -495,9 +495,9 @@ class Cdr extends \FreePBX_Helpers implements \BMO {
 			$sth->execute([':chan' => '%/'.$extension.'-%', ':dst_channel' => '%-'.$defaultExtension.'@%', ':extension' => $extension, ':extensionv' => 'vmu'.$extension]);
 		}
 		$calls = $sth->fetchAll(\PDO::FETCH_ASSOC);
-		$sngaiModuleStatus = false;
-		if ($this->FreePBX->Modules->checkStatus("sngai")) {
-			$sngaiModuleStatus = true;
+		$scribeModuleStatus = false;
+		if ($this->FreePBX->Modules->checkStatus("scribe")) {
+			$scribeModuleStatus = true;
 		}
 		foreach($calls as &$call) {
 			if(empty($call['dst']) && preg_match('/\/(.*)\-/',(string) $call['dstchannel'],$matches)) {
