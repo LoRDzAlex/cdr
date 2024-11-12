@@ -838,7 +838,7 @@ if ( $tot_calls_raw ) {
 			</div>
 		</div>';
 	}
-	echo "</table>";
+	echo "</table><div id='addtionalcontent'></div>";
 }
 ?>
 
