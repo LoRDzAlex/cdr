@@ -119,6 +119,9 @@ function openmodal(turl) {
     $("#addtionalcontent").html(result.html);
     $("#addtionalcontent").appendTo("body");
     $("#datamodal").modal('show');
+	$("#datamodal .modal-header").attr("style", function(i, style) {
+		return  'flex-direction: row !important;';
+	});
 }
 
 function closemodal() {
