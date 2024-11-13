@@ -496,7 +496,7 @@ class Cdr extends \FreePBX_Helpers implements \BMO {
 		}
 		$calls = $sth->fetchAll(\PDO::FETCH_ASSOC);
 		$scribeModuleStatus = false;
-		if ($this->FreePBX->Modules->checkStatus("scribe")) {
+		if ($this->FreePBX->Modules->checkStatus("scribe") && $this->FreePBX->Scribe->isLicensed()) {
 			$scribeModuleStatus = true;
 		}
 		foreach($calls as &$call) {
