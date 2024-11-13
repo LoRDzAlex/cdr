@@ -87,7 +87,7 @@ class Cdr extends Modules{
 			"showPlayback" => $this->_checkPlayback() ? "1" : "0",
 			"showDownload" => $this->_checkDownload() ? "1" : "0",
 			"supportedHTML5" => implode(",",$this->UCP->FreePBX->Media->getSupportedHTML5Formats()),
-			"isScribeEnabled" =>$this->UCP->FreePBX->Modules->checkStatus("scribe")
+			"isScribeEnabled" => ($this->UCP->FreePBX->Modules->checkStatus("scribe") && $this->UCP->FreePBX->Scribe->isLicensed())
 		);
 	}
 
