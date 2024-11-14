@@ -1222,7 +1222,9 @@ function cdr_formatRecordingFile($recordingfile, $basename, $id, $uid) {
 		$td = "<td title=\"$basename\"><a href=\"#\" onClick=\"javascript:cdr_play($playbackRow,'$uid'); return false;\"><img src=\"assets/cdr/images/cdr_sound.png\" alt=\"Call recording\" /></a>
 		<a href=\"$download_url\"><img src=\"assets/cdr/images/cdr_download.png\" alt=\"Call recording\" /></a> ";
 		if($url) {
-			$td .="<a href=\"javascript:void(0)\"> <i class=\"fa fa-file-text transcript\" onclick=\"openmodal('$url')\"></i></a>";
+			$td .="<a href=\"javascript:void(0)\" onclick=\"openmodal('$url')\">
+			<img src='../admin/assets/scribe/images/scribe-doc.png' width='15px' height='15px' alt='PBX Scribe' />
+			</a>";
 		}
 		$td .='</td>';
 		echo $td;
