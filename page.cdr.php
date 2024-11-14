@@ -1214,7 +1214,7 @@ function cdr_formatRecordingFile($recordingfile, $basename, $id, $uid) {
 		<a href=\"$download_url\"><img src=\"assets/cdr/images/cdr_download.png\" alt=\"Call recording\" /></a> ";
 		if($url) {
 			$td .="<a href=\"javascript:void(0)\" onclick=\"openmodal('$url')\">
-			<img src='../admin/assets/scribe/images/scribe-doc.png' width='15px' height='15px' alt='PBX Scribe' />
+			<img src='../admin/assets/scribe/images/scribe.png' width='15px' height='15px' alt='PBX Scribe' />
 			</a>";
 		}
 		$td .='</td>';
